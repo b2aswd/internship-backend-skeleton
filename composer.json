@@ -1,0 +1,15 @@
+{
+	"name": "b2aswd/internship-backend-skeleton",
+	"description": "Backend for simple messenger project",
+	"license": "proprietary",
+	"require-dev": {
+		"php": ">=7.4",
+		"phalcon/ide-stubs": ">=4.0.4"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"nette/utils": "^3.2",
+		"php-mqtt/client": "^1.1"
+	}
+}

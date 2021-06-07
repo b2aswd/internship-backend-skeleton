@@ -1,0 +1,14 @@
+FROM lukas3k11/simple-messenger-backend:devel
+
+COPY app ./app
+COPY public ./public
+
+RUN set -xe ; \
+	composer install \
+		--prefer-dist \
+		--no-dev \
+		--no-scripts \
+		--no-progress \
+		--optimize-autoloader \
+		--no-ansi \
+		--no-interaction
