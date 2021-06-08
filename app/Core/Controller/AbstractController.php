@@ -38,13 +38,16 @@ abstract class AbstractController extends \Phalcon\Mvc\Controller
 	public function authenticate()
 	{
 		$headers = getallheaders();
-		if (!isset($headers['Authorization'])) {
+
+		if (!isset($headers['Authorization']) && !isset($headers['authorization'])) {
 			throw new \SimpleMessenger\Core\Exception\BaseException("Authorization header missing", 400);
 		}
 
+		$authorizationHeader = (isset($headers['Authorization'])) ? $headers['Authorization'] : $headers['authorization'];
+
 		$apiKey = '';
 		$matches = [];
-		if (preg_match("/Basic ([0-9a-zA-Z]*)/", $headers['Authorization'], $matches)) {
+		if (preg_match("/Basic ([0-9a-zA-Z]*)/", $authorizationHeader, $matches)) {
 			$apiKey = $matches[1];
 		}
 
