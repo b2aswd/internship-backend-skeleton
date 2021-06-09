@@ -20,6 +20,16 @@
 17. Nastavení PHP verzi na 7.4 v PhpStorm
 18. Nastavení Xdebug (nástroj pro debugování kódu)
 
+### Zadání
+- Vytvořit Controller, Model a případně Mapper pro ChatRoom modul (např. adresář app/ChatRoom)
+- Důležité upravit soubor **public/index.php**, ve kterém je třeba přidat nově přidaný modul
+- ChatRoom by měl obsahovat název, popis a případně kdo jej vytvořil (podobně jako tomu je u modulu User - createdById)
+- Vytvořit Controller, Model a případně Mapper pro Message modul (např. pro Controller app/ChatRoom/Controller/ChatRoom/MessageController.php nebo jako samostatný modul)
+- Message by měla obsahovat vazbu na ChatRoom, obsah zprávy a případně kdo ji vytvořil (podobně jako tomu je u modulu User - createdById)
+- Dále je možné dodělat třídu MqttService (app/Core/Service/MqttService.php), kde je potřeba vytvořit metodu pro připojení a publikování zprávy
+- Po dokončení této třídy je třeba v Controlleru při akci vytvoření nebo na modelu zprávy (afterCreate metoda podle dokumentace)
+získat třídu MqttService (**$mqttService = $this->getDI()->getShared(\SimpleMessenger\Core\Service\MqttService::class);**) a zavolat na ní metodu pro publikování
+- MQTT zpráva by měla obsahovat json (pole) informací o zprávě (např. vytvoření instance mapperu a zavolání map metody, do které se předá vytvořená zpráva)
 
 ### REST API
 https://www.itnetwork.cz/programovani/nezarazene/stoparuv-pruvodce-rest-api
