@@ -32,20 +32,20 @@ získat třídu MqttService (**$mqttService = $this->getDI()->getShared(\SimpleM
 - MQTT zpráva by měla obsahovat json (pole) informací o zprávě (např. vytvoření instance mapperu a zavolání map metody, do které se předá vytvořená zpráva)
 
 ### REST API
-https://www.itnetwork.cz/programovani/nezarazene/stoparuv-pruvodce-rest-api
+- https://www.itnetwork.cz/programovani/nezarazene/stoparuv-pruvodce-rest-api
 
 ### PHP
-https://www.tutorialspoint.com/php/index.htm
-https://www.tutorialspoint.com/php-traits
+- https://www.tutorialspoint.com/php/index.htm
+- https://www.tutorialspoint.com/php-traits
 
 ### PostgresSQL
-https://www.tutorialspoint.com/postgresql/index.htm
+- https://www.tutorialspoint.com/postgresql/index.htm
 
 ### Phalcon docs
-https://docs.phalcon.io/4.0/en/introduction
-https://docs.phalcon.io/4.0/cs-cz/db-models
-https://docs.phalcon.io/4.0/cs-cz/db-models-validation
-https://docs.phalcon.io/4.0/cs-cz/di
+- https://docs.phalcon.io/4.0/en/introduction
+- https://docs.phalcon.io/4.0/cs-cz/db-models
+- https://docs.phalcon.io/4.0/cs-cz/db-models-validation
+- https://docs.phalcon.io/4.0/cs-cz/di
 
 ### MQTT client library docs
-https://github.com/php-mqtt/client
+- https://github.com/php-mqtt/client
