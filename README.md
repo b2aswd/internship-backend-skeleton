@@ -20,6 +20,11 @@
 17. Nastavení PHP verzi na 7.4 v PhpStorm
 18. Nastavení Xdebug (nástroj pro debugování kódu)
 
+### Po zapnutí PC
+1. Ve složce s workspace, kde se nachází *Vagrantfile*, je potřeba přes příkazovou řádku spustit **vagrant up** a následně **vagrant ssh**
+2. cd /var/www/projects/internship-backend-skeleton
+3. docker-compose -p simple_messenger -f docker/docker-compose.yml up -d
+
 ### Zadání
 - Vytvořit Controller, Model a případně Mapper pro ChatRoom modul (např. adresář app/ChatRoom)
 - Důležité upravit soubor **public/index.php**, ve kterém je třeba přidat nově přidaný modul
