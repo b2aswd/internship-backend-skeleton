@@ -474,7 +474,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"pavek@novak.cz\",\n    \"password\": \"tajne-heslo\"\n}",
+							"raw": "{\n    \"email\": \"pavel@novak.cz\",\n    \"password\": \"tajne-heslo\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
