@@ -6,9 +6,9 @@ services:
     image: emqx/emqx:latest
     restart: "unless-stopped"
     ports:
-      - 31002:31002
-      - 31003:31003
-      - 31004:18083
+      - "31002:31002"
+      - "31003:31003"
+      - "31004:18083"
     environment:
       - EMQX_LISTENER__TCP__EXTERNAL=31002
       - EMQX_LISTENER__WS__EXTERNAL=31003
@@ -19,7 +19,7 @@ services:
     image: postgres:latest
     restart: "unless-stopped"
     ports:
-      - 31001:5432
+      - "31001:5432"
     env_file:
       - env/postgres.env
     environment:
@@ -33,19 +33,18 @@ services:
     image: lukas3k11/simple-messenger-backend:devel
     restart: "unless-stopped"
     ports:
-      - 31000:80
+      - "31000:80"
     env_file:
       - env/postgres.env
       - env/emqx.env
     environment:
-      - XDEBUG_CONFIG
       - TZ=UTC
     volumes:
-      - ${PWD}/app:/var/www/app:rw
-      - ${PWD}/public:/var/www/public:rw
-      - ${PWD}/vendor:/var/www/vendor:rw
-      - ${PWD}/composer.json:/var/www/composer.json:rw
-      - ${PWD}/composer.lock:/var/www/composer.lock:rw
+      - ./../app:/var/www/app:rw
+      - ./../public:/var/www/public:rw
+      - ./../vendor:/var/www/vendor:rw
+      - ./../composer.json:/var/www/composer.json:rw
+      - ./../composer.lock:/var/www/composer.lock:rw
     depends_on:
       - postgres
       - emqx
