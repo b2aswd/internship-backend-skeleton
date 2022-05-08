@@ -1,4 +1,4 @@
-FROM lukas3k11/simple-messenger-backend:devel
+FROM lukas3k11/simple-messenger-backend:base
 
 COPY app ./app
 COPY public ./public
