@@ -1,0 +1,2080 @@
+{
+	"info": {
+		"_postman_id": "c0dece13-4c96-4345-821c-40762e180a17",
+		"name": "SimpleMessenger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic {{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:09:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic {{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/user/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/user/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:09:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Admin\",\n        \"surname\": \"B2A\",\n        \"email\": \"admin@b2a.cz\",\n        \"created\": \"2021-06-06T21:16:06.000Z\",\n        \"createdBy\": null,\n        \"updated\": null,\n        \"updatedBy\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic {{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pavel\",\n    \"surname\": \"Novák\",\n    \"email\": \"pavel@novak.cz\",\n    \"password\": \"tajne-heslo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Pavel\",\n    \"surname\": \"Novák\",\n    \"email\": \"pavel@novak.cz\",\n    \"password\": \"tajne-heslo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:10:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "340"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Pavel\",\n        \"surname\": \"Novák\",\n        \"email\": \"pavel@novak.cz\",\n        \"created\": \"2021-06-06T22:10:05.000Z\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        },\n        \"updated\": null,\n        \"updatedBy\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pavel\",\n    \"surname\": \"Novák\",\n    \"email\": \"pavel@novak.cz\",\n    \"password\": \"tajne-heslo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Pavel\",\n    \"surname\": \"Novák\",\n    \"email\": \"pavel@novakk.cz\",\n    \"password\": \"tajne-heslo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/user/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:10:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "197"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Pavel\",\n        \"surname\": \"Novák\",\n        \"email\": \"pavel@novakk.cz\",\n        \"created\": \"2021-06-06T22:10:19.000Z\",\n        \"createdBy\": null,\n        \"updated\": null,\n        \"updatedBy\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"pavel@novak.cz\",\n    \"password\": \"tajne-heslo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"pavel@novak.cz\",\n    \"password\": \"tajne-heslo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/user/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:10:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "384"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Pavel\",\n        \"surname\": \"Novák\",\n        \"email\": \"pavel@novak.cz\",\n        \"apiKey\": \"b63k4JdeqNEDcsZ5MGNgwgvwH3ksYyKq\",\n        \"created\": \"2021-06-06T22:10:05.000Z\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        },\n        \"updated\": null,\n        \"updatedBy\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic {{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pavel\",\n    \"surname\": \"Novák\",\n    \"email\": \"pavel@novak.cz\",\n    \"password\": \"tajne-heslo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Pavel\",\n    \"surname\": \"Novák\",\n    \"email\": \"pavel@novak.cz\",\n    \"password\": \"tajne-heslo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/user/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:11:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "506"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Pavel\",\n        \"surname\": \"Novák\",\n        \"email\": \"pavel@novak.cz\",\n        \"created\": \"2021-06-06T22:10:05.000Z\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        },\n        \"updated\": \"2021-06-06T22:11:01.000Z\",\n        \"updatedBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{apiKey}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/user/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic {{apiKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/user/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:11:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ChatRoom",
+			"item": [
+				{
+					"name": "Message",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room/:chatRoomId/message",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room",
+										":chatRoomId",
+										"message"
+									],
+									"variable": [
+										{
+											"key": "chatRoomId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic {{apiKey}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/chat-room/:chatRoomId/message",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"chat-room",
+												":chatRoomId",
+												"message"
+											],
+											"variable": [
+												{
+													"key": "chatRoomId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 06 Jun 2021 22:14:21 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.38 (Debian)"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.15"
+										},
+										{
+											"key": "Status",
+											"value": "200 OK"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, Content-Type, Accept, Authorization"
+										},
+										{
+											"key": "Content-Length",
+											"value": "930"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=99"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"chatRoom\": {\n                \"id\": 2,\n                \"title\": \"Test room\",\n                \"description\": \"update\",\n                \"created\": \"2021-06-06T21:17:39.000Z\",\n                \"createdBy\": {\n                    \"id\": 1,\n                    \"name\": \"Admin\",\n                    \"surname\": \"B2A\",\n                    \"email\": \"admin@b2a.cz\",\n                    \"created\": \"2021-06-06T21:16:06.000Z\",\n                    \"createdBy\": null,\n                    \"updated\": null,\n                    \"updatedBy\": null\n                },\n                \"updated\": \"2021-06-06T22:02:33.000Z\",\n                \"updatedBy\": {\n                    \"id\": 1,\n                    \"name\": \"Admin\",\n                    \"surname\": \"B2A\",\n                    \"email\": \"admin@b2a.cz\",\n                    \"created\": \"2021-06-06T21:16:06.000Z\",\n                    \"createdBy\": null,\n                    \"updated\": null,\n                    \"updatedBy\": null\n                }\n            },\n            \"content\": \"Test - update\",\n            \"created\": \"2021-06-06T22:03:56.000Z\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            },\n            \"updated\": \"2021-06-06T22:06:33.000Z\",\n            \"updatedBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            }\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Detail",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room/message/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room",
+										"message",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Detail",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic {{apiKey}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/chat-room/message/:id",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"chat-room",
+												"message",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 06 Jun 2021 22:14:31 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.38 (Debian)"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.15"
+										},
+										{
+											"key": "Status",
+											"value": "200 OK"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, Content-Type, Accept, Authorization"
+										},
+										{
+											"key": "Content-Length",
+											"value": "928"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 2,\n        \"chatRoom\": {\n            \"id\": 2,\n            \"title\": \"Test room\",\n            \"description\": \"update\",\n            \"created\": \"2021-06-06T21:17:39.000Z\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            },\n            \"updated\": \"2021-06-06T22:02:33.000Z\",\n            \"updatedBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            }\n        },\n        \"content\": \"Test - update\",\n        \"created\": \"2021-06-06T22:03:56.000Z\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        },\n        \"updated\": \"2021-06-06T22:06:33.000Z\",\n        \"updatedBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"content\": \"Testíček\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room/:chatRoomId/message",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room",
+										":chatRoomId",
+										"message"
+									],
+									"variable": [
+										{
+											"key": "chatRoomId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic {{apiKey}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"content\": \"Testíček\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/chat-room/:chatRoomId/message",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"chat-room",
+												":chatRoomId",
+												"message"
+											],
+											"variable": [
+												{
+													"key": "chatRoomId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 06 Jun 2021 22:14:40 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.38 (Debian)"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.15"
+										},
+										{
+											"key": "Status",
+											"value": "200 OK"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, Content-Type, Accept, Authorization"
+										},
+										{
+											"key": "Content-Length",
+											"value": "767"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 3,\n        \"chatRoom\": {\n            \"id\": 2,\n            \"title\": \"Test room\",\n            \"description\": \"update\",\n            \"created\": \"2021-06-06T21:17:39.000Z\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            },\n            \"updated\": \"2021-06-06T22:02:33.000Z\",\n            \"updatedBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            }\n        },\n        \"content\": \"Testíček\",\n        \"created\": \"2021-06-06T22:14:40.000Z\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        },\n        \"updated\": null,\n        \"updatedBy\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"content\": \"Testíček\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room/message/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room",
+										"message",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic {{apiKey}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"content\": \"Testíček\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/chat-room/message/:id",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"chat-room",
+												"message",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 06 Jun 2021 22:14:51 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.38 (Debian)"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.15"
+										},
+										{
+											"key": "Status",
+											"value": "200 OK"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, Content-Type, Accept, Authorization"
+										},
+										{
+											"key": "Content-Length",
+											"value": "933"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 2,\n        \"chatRoom\": {\n            \"id\": 2,\n            \"title\": \"Test room\",\n            \"description\": \"update\",\n            \"created\": \"2021-06-06T21:17:39.000Z\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            },\n            \"updated\": \"2021-06-06T22:02:33.000Z\",\n            \"updatedBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            }\n        },\n        \"content\": \"Testíček\",\n        \"created\": \"2021-06-06T22:03:56.000Z\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        },\n        \"updated\": \"2021-06-06T22:14:51.000Z\",\n        \"updatedBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room/message/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room",
+										"message",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic {{apiKey}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/chat-room/message/:id",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"chat-room",
+												"message",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 06 Jun 2021 22:15:02 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.38 (Debian)"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.15"
+										},
+										{
+											"key": "Status",
+											"value": "200 OK"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, Content-Type, Accept, Authorization"
+										},
+										{
+											"key": "Content-Length",
+											"value": "41"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": []\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic {{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/chat-room",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat-room"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "488"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Test room\",\n            \"description\": \"update\",\n            \"created\": \"2021-06-06T21:17:39.000Z\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            },\n            \"updated\": \"2021-06-06T22:02:33.000Z\",\n            \"updatedBy\": {\n                \"id\": 1,\n                \"name\": \"Admin\",\n                \"surname\": \"B2A\",\n                \"email\": \"admin@b2a.cz\",\n                \"created\": \"2021-06-06T21:16:06.000Z\",\n                \"createdBy\": null,\n                \"updated\": null,\n                \"updatedBy\": null\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic {{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/chat-room/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat-room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:11:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "486"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Test room\",\n        \"description\": \"update\",\n        \"created\": \"2021-06-06T21:17:39.000Z\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        },\n        \"updated\": \"2021-06-06T22:02:33.000Z\",\n        \"updatedBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic {{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test room\",\n    \"description\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/chat-room",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat-room"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic {{apiKey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Test room\",\n    \"description\": \"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:11:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "318"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 4,\n        \"title\": \"Test room\",\n        \"description\": \"test\",\n        \"created\": \"2021-06-06T22:11:51.000Z\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        },\n        \"updated\": null,\n        \"updatedBy\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{apiKey}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test room\",\n    \"description\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/chat-room/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat-room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic {{apiKey}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Test room\",\n    \"description\": \"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:12:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "484"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 4,\n        \"title\": \"Test room\",\n        \"description\": \"test\",\n        \"created\": \"2021-06-06T22:11:51.000Z\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        },\n        \"updated\": \"2021-06-06T22:12:02.000Z\",\n        \"updatedBy\": {\n            \"id\": 1,\n            \"name\": \"Admin\",\n            \"surname\": \"B2A\",\n            \"email\": \"admin@b2a.cz\",\n            \"created\": \"2021-06-06T21:16:06.000Z\",\n            \"createdBy\": null,\n            \"updated\": null,\n            \"updatedBy\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{apiKey}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/chat-room/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat-room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Basic {{apiKey}}"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/chat-room/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"chat-room",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 06 Jun 2021 22:14:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.15"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"1.0\",\n    \"error\": false,\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
